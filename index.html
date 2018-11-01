@@ -17,11 +17,13 @@
         const button = document.querySelector('.bubbly-button')
         const gnome = document.querySelector('.gnome')
         const sound = document.querySelector('audio')
-        
+        let count = 0;
+
         button.addEventListener('click', function(){
             button.classList.add('hidden')
+            button.innerHTML = `You've clicked ${++count} time(s)`
             gnome.classList.remove('hidden')
-
+            
             sound.play()
             
             setTimeout(function(){
